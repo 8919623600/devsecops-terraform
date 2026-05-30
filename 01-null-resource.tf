@@ -1,4 +1,2 @@
-resource "null_resource" "test" {
-    name="null"
-}
+resource "null_resource" "test" {}
  

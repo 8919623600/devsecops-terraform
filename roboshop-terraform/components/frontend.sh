@@ -52,6 +52,7 @@ cp nginx.conf /etc/nginx/nginx.conf
 
 echo -n "Starting the $COMPONENT service: "
 systemctl enable nginx &>> $LOG
+stat $?
 systemctl restart nginx &>> $LOG
 stat $?
 

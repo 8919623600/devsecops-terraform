@@ -4,7 +4,7 @@ resource "aws_instance" "main" {
   instance_type = lookup(each.value, "instance_type", "t3.micro")
   # Exception Handling : If instance_type is not mentioned for any component, then it will take t3.micro as default value.
   user_data = file(each.value.user_data)
-  vpc_security_group_ids = ["sg-0f3615429e670ef1d"]
+  vpc_security_group_ids = ["sg-0955241e438d73a61"]
 
   tags = {
     Name = each.key

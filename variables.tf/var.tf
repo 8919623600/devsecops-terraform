@@ -9,12 +9,12 @@ output cityname {
   
 }
 
-variables "fruits" {
-    default = { [
+variable "fruits" {
+    default = [
         "Apple",
         "banana",
         "mango"
-    ] }
+    ] 
 }
 
 output "fruits" {

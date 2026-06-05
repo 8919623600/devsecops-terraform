@@ -11,8 +11,8 @@ output cityname {
 
 variables "fruits" {
     default = [
-        "Apple"
-        "banana"
+        "Apple",
+        "banana",
         "mango"
     ]
 }

@@ -10,11 +10,11 @@ output cityname {
 }
 
 variables "fruits" {
-    default = [
+    default = { [
         "Apple",
         "banana",
         "mango"
-    ]
+    ] }
 }
 
 output "fruits" {

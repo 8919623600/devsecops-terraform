@@ -8,3 +8,15 @@ output cityname {
     value = var.cityname
   
 }
+
+variables "fruits" {
+    default = [
+        "Apple"
+        "banana"
+        "mango"
+    ]
+}
+
+output "fruits" {
+    value = var.fruits
+}

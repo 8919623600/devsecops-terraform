@@ -25,7 +25,7 @@ data "aws_ami" "latest" {
 resource "aws_instance" "main" {
 
     ami = data.aws_ami.latest.id
-    instance_type  = "t3.micro"
+    instance_type  = var.instance_type
 
     tags = {
         Name = "terraform-instance"

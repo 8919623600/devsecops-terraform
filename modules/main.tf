@@ -3,7 +3,7 @@ data "aws_ami" "latest" {
     
     filter {
         name   = "name"
-        values = ["DevOps-LabImage-RHEL9"] # Name of the AMI, you can find it in the AWS console or by using AWS CLI
+        values = ["${var.ami_name}"] # Name of the AMI, you can find it in the AWS console or by using AWS CLI
     }
         
     owners = ["355449129696"] # Owner ID of the AMI, you can find it in the AWS console or by using AWS CLI

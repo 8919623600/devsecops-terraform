@@ -5,3 +5,7 @@ variable "instance_type" {
 variable "ami_name" {
     default = "DevOps-LabImage-RHEL9"
 }
+
+variable "instance_name" {
+    default = "terraform-instance"
+}

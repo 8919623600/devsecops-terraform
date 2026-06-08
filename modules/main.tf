@@ -15,6 +15,6 @@ resource "aws_instance" "main" {
     instance_type  = var.instance_type
 
     tags = {
-        Name = "terraform-instance"
+        Name = var.instance_name
     }
 }

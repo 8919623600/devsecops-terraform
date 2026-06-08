@@ -7,5 +7,5 @@ variable "ami_name" {
 }
 
 variable "instance_name" {
-    default = "terraform-instance"
+    default = "terraform-test-instance"
 }

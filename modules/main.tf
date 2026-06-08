@@ -24,7 +24,7 @@ data "aws_ami" "latest" {
 
 resource "aws_instance" "main" {
 
-    ami = data.aws_ami.latest.id
+    ami = data.aws_ami.latest.name
     instance_type  = "t3.micro"
 
     tags = {

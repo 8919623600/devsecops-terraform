@@ -19,12 +19,12 @@ data "aws_ami" "latest" {
         values = ["DevOps-LabImage-RHEL9"] # Name of the AMI, you can find it in the AWS console or by using AWS CLI
     }
         
-    owners = ["self"] # Owner ID of the AMI, you can find it in the AWS console or by using AWS CLI
+    owners = ["355449129696"] # Owner ID of the AMI, you can find it in the AWS console or by using AWS CLI
 }
 
 resource "aws_instance" "main" {
 
-    ami = data.aws_ami.latest.name
+    ami = data.aws_ami.latest.id
     instance_type  = "t3.micro"
 
     tags = {

@@ -1,4 +1,4 @@
-resource "aws_instance" "terraform-instance" {
+resource "aws_instance" "main" {
     count          = length(var.component)
     ami            = var.ami_id
     instance_type  = var.instance_type
@@ -7,7 +7,7 @@ resource "aws_instance" "terraform-instance" {
         Name = var.component[count.index]
     }
 
-   provisioner "file" {
+  provisioner "file" {
     source = "./provider.tf"
     destination = "/home/ec2-user/provider.tf"
    

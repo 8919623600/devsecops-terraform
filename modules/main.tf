@@ -1,20 +1,7 @@
-data "aws_ami" "latest" {
-    most_recent = true
-    
-    filter {
-        name   = "name"
-        values = ["${var.ami_name}"] # Name of the AMI, you can find it in the AWS console or by using AWS CLI
-    }
-        
-    owners = ["355449129696"] # Owner ID of the AMI, you can find it in the AWS console or by using AWS CLI
-}
-
-resource "aws_instance" "main" {
-
-    ami = data.aws_ami.latest.id
+module "demo-ec2" {
+    source         = "./modules"
     instance_type  = var.instance_type
+    instance_name  = var.instance_name
+    ami_name       = var.ami_name
 
-    tags = {
-        Name = var.instance_name
-    }
 }

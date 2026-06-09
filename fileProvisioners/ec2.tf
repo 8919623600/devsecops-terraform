@@ -1,0 +1,22 @@
+resource "aws_instance" "terraform-instance" {
+    count          = length(var.component)
+    ami            = var.ami_id
+    instance_type  = var.instance_type
+
+    tags = {
+        Name = var.component[count.index]
+    }
+
+   provisioner "file" {
+    source = "./provider.tf"
+    destination = "/home/ec2-user/provider.tf"
+   
+
+   connection {
+    type     = "ssh"
+    user     = "ec2-user"
+    password = "DevOps321"
+    host     = self.private_ip
+    }
+  }
+}
